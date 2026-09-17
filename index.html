@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Complexe Scolaire Philadelphie — Maternelle, primaire, secondaire et humanités à Kinshasa, commune de Kalamu.">
+  <meta name="theme-color" content="#092b4b">
+  <title>Complexe Scolaire Philadelphie | Kinshasa</title>
+
+  <style>
+    :root{
+      --ink:#092b4b;
+      --blue:#0b426d;
+      --ochre:#d99a28;
+      --cream:#f8f3e9;
+      --leaf:#2f6e4f;
+      --line:#dfd6c5;
+      --white:#fff;
+      --muted:#64748b;
+      --shadow:0 14px 40px rgba(9,43,75,.10);
+      --radius:22px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Arial,Helvetica,sans-serif;
+      color:var(--ink);
+      background:#fff;
+      line-height:1.65;
+    }
+    img{display:block;max-width:100%}
+    a{text-decoration:none;color:inherit}
+    button{font:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    .eyebrow{
+      display:inline-block;
+      color:var(--ochre);
+      font-size:.78rem;
+      font-weight:800;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      margin-bottom:.7rem
+    }
+    h1,h2,h3{line-height:1.15}
+    h1{font-size:clamp(2.25rem,6vw,4.5rem);letter-spacing:-.045em}
+    h2{font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:-.025em}
+    h3{font-size:1.25rem}
+    p{color:#506176}
+    .topbar{
+      background:var(--ink);color:#fff;font-size:.85rem;padding:.55rem 0
+    }
+    .topbar .container{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+    header{
+      position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);
+      border-bottom:1px solid var(--line);backdrop-filter:blur(10px)
+    }
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .brand{display:flex;align-items:center;gap:.75rem;font-weight:900}
+    .brand-mark{
+      width:44px;height:44px;border-radius:12px;background:var(--ink);color:#fff;
+      display:grid;place-items:center;font-weight:900;font-size:1rem
+    }
+    .brand small{display:block;color:var(--muted);font-weight:600;font-size:.72rem;margin-top:1px}
+    .links{display:flex;align-items:center;gap:1.2rem;font-size:.9rem;font-weight:700}
+    .links a:hover{color:var(--ochre)}
+    .menu-btn{display:none;border:0;background:var(--ink);color:#fff;border-radius:10px;padding:.65rem .8rem;cursor:pointer}
+    .hero{background:var(--cream);padding:5rem 0 4rem;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:3.5rem}
+    .hero p{font-size:1.08rem;max-width:650px;margin:1.3rem 0 1.8rem}
+    .actions{display:flex;gap:.8rem;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:.45rem;
+      padding:.85rem 1.1rem;border-radius:999px;font-weight:800;border:1px solid transparent;
+      cursor:pointer;transition:.2s
+    }
+    .btn-primary{background:var(--ink);color:#fff}
+    .btn-primary:hover{transform:translateY(-2px)}
+    .btn-secondary{background:#fff;border-color:var(--line)}
+    .hero-image{position:relative}
+    .hero-image img{width:100%;height:470px;object-fit:cover;border-radius:30px;box-shadow:var(--shadow)}
+    .badge{
+      position:absolute;left:-18px;bottom:24px;background:#fff;border:1px solid var(--line);
+      padding:.8rem 1rem;border-radius:16px;box-shadow:var(--shadow);font-weight:800
+    }
+    section{padding:5rem 0}
+    .section-head{max-width:720px;margin-bottom:2rem}
+    .section-head p{margin-top:.75rem}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+    .card{
+      background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem;
+      box-shadow:0 8px 25px rgba(9,43,75,.05)
+    }
+    .card-icon{width:42px;height:42px;border-radius:12px;background:var(--cream);display:grid;place-items:center;margin-bottom:1rem;font-weight:900}
+    .card p{font-size:.92rem;margin-top:.5rem}
+    .soft{background:var(--cream)}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+    .photo{border-radius:28px;overflow:hidden;box-shadow:var(--shadow)}
+    .photo img{width:100%;height:430px;object-fit:cover}
+    .list{display:grid;gap:.8rem;margin-top:1.4rem}
+    .list-item{display:flex;gap:.8rem;padding:1rem;background:#fff;border:1px solid var(--line);border-radius:15px}
+    .dot{width:10px;height:10px;border-radius:50%;background:var(--ochre);margin-top:.55rem;flex:0 0 auto}
+    .programs{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1.5rem}
+    .program{padding:1.15rem;border:1px solid var(--line);border-radius:17px;background:#fff}
+    .program strong{display:block;margin-bottom:.25rem}
+    .news{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .news-card{overflow:hidden;border:1px solid var(--line);border-radius:var(--radius);background:#fff}
+    .news-card img{width:100%;height:210px;object-fit:cover}
+    .news-body{padding:1.2rem}
+    .tag{display:inline-block;font-size:.72rem;font-weight:800;background:#edf5ef;color:var(--leaf);padding:.35rem .55rem;border-radius:999px;margin-bottom:.65rem}
+    .news-body p{font-size:.9rem;margin:.55rem 0 1rem}
+    .read-more{border:0;background:none;color:var(--blue);font-weight:800;cursor:pointer;padding:0}
+    .article-expanded{display:none;margin-top:.65rem}
+    .article-expanded.show{display:block}
+    .dark{background:var(--blue);color:#fff}
+    .dark p{color:#d9e5ee}
+    .dark .section-head p{color:#d9e5ee}
+    .extensions{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin-top:1.5rem}
+    .extension{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.2);border-radius:17px;padding:1.1rem}
+    .parent-box{background:#fff;border-radius:28px;padding:2rem;box-shadow:var(--shadow);color:var(--ink)}
+    .form-note{display:none;margin-top:1rem;padding:.9rem;border-radius:12px;background:#edf5ef;color:var(--leaf);font-weight:700}
+    .form-note.show{display:block}
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .contact-card{padding:1.3rem;background:#fff;border:1px solid var(--line);border-radius:18px}
+    footer{background:var(--ink);color:#fff;padding:3rem 0}
+    footer p,footer a{color:#cbd8e2}
+    .footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2rem}
+    .footer-title{font-weight:900;margin-bottom:.7rem}
+    .footer-links{display:grid;gap:.4rem;font-size:.9rem}
+    .copyright{border-top:1px solid rgba(255,255,255,.15);margin-top:2rem;padding-top:1.2rem;font-size:.82rem}
+    @media(max-width:900px){
+      .links{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:1rem 4%;flex-direction:column;align-items:flex-start}
+      .links.open{display:flex}.menu-btn{display:block}
+      .hero-grid,.split{grid-template-columns:1fr}
+      .hero-image img{height:360px}.badge{left:12px}
+      .cards{grid-template-columns:repeat(2,1fr)}
+      .news{grid-template-columns:1fr}
+      .extensions{grid-template-columns:1fr 1fr}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:600px){
+      section{padding:3.5rem 0}.hero{padding:3.5rem 0}
+      .cards,.programs,.contact,.extensions,.footer-grid{grid-template-columns:1fr}
+      .hero-image img{height:310px}
+      .topbar .container{justify-content:center;text-align:center}
+      .brand span{font-size:.9rem}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container">
+      <span>Complexe Scolaire Philadelphie</span>
+      <span>Kinshasa · Commune de Kalamu · RDC</span>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#accueil" aria-label="Accueil">
+        <span class="brand-mark">CS</span>
+        <span>Complexe Scolaire Philadelphie<small>Maternelle · Primaire · Secondaire · Humanités</small></span>
+      </a>
+
+      <nav class="links" id="main-nav">
+        <a href="#accueil">Accueil</a>
+        <a href="#niveaux">Niveaux</a>
+        <a href="#ecole">Notre école</a>
+        <a href="#actualites">Actualités</a>
+        <a href="#parents">Parents</a>
+        <a href="#extensions">Extensions</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="menu-btn" id="menu-btn" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Bienvenue</span>
+          <h1>Grandir, apprendre et construire son avenir.</h1>
+          <p>
+            Le Complexe Scolaire Philadelphie accompagne les élèves de la maternelle
+            aux humanités dans un cadre éducatif pensé pour favoriser les connaissances,
+            la discipline, l'autonomie et l'épanouissement.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#niveaux">Découvrir nos niveaux →</a>
+            <a class="btn btn-secondary" href="#contact">Nous contacter</a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img src="https://images.pexels.com/photos/8617964/pexels-photo-8617964.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Élève dans un environnement scolaire">
+          <div class="badge">📚 Une école pour chaque étape</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="niveaux">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Nos niveaux</span>
+          <h2>Un parcours scolaire complet</h2>
+          <p>De la petite enfance à la préparation des études et de la vie professionnelle.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon">01</div>
+            <h3>Maternelle</h3>
+            <p>Premiers apprentissages, éveil, socialisation et développement de l'autonomie.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">02</div>
+            <h3>Primaire</h3>
+            <p>Acquisition des fondamentaux et développement progressif des compétences.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">03</div>
+            <h3>Secondaire</h3>
+            <p>Approfondissement des connaissances, méthode de travail et orientation.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">04</div>
+            <h3>Humanités</h3>
+            <p>Des filières adaptées aux projets scolaires et professionnels des élèves.</p>
+          </article>
+        </div>
+
+        <div class="programs">
+          <div class="program"><strong>Science</strong><span>Une formation orientée vers les sciences et la poursuite d'études.</span></div>
+          <div class="program"><strong>Commercial et gestion</strong><span>Des bases pour comprendre l'économie, la gestion et le monde professionnel.</span></div>
+          <div class="program"><strong>Littéraire</strong><span>Culture générale, expression, analyse et ouverture sur les lettres.</span></div>
+          <div class="program"><strong>Pédagogie générale</strong><span>Une orientation centrée sur les sciences de l'éducation et la pédagogie.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft" id="ecole">
+      <div class="container split">
+        <div class="photo">
+          <img src="https://images.pexels.com/photos/11025019/pexels-photo-11025019.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Environnement d'apprentissage">
+        </div>
+        <div>
+          <span class="eyebrow">Notre école</span>
+          <h2>Un environnement où l'élève est au centre.</h2>
+          <p style="margin-top:1rem">
+            Notre projet scolaire repose sur un accompagnement progressif de l'élève,
+            avec une attention portée aux apprentissages, à la responsabilité et à la vie en communauté.
+          </p>
+          <div class="list">
+            <div class="list-item"><span class="dot"></span><div><strong>Apprendre</strong><p>Développer des connaissances solides et des méthodes de travail.</p></div></div>
+            <div class="list-item"><span class="dot"></span><div><strong>Grandir</strong><p>Encourager l'autonomie, le respect et la confiance.</p></div></div>
+            <div class="list-item"><span class="dot"></span><div><strong>Se préparer</strong><p>Accompagner chaque élève dans son parcours et ses ambitions.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="actualites">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Actualités</span>
+          <h2>La vie du Complexe Scolaire Philadelphie</h2>
+          <p>Retrouvez ici les informations et moments importants de notre communauté scolaire.</p>
+        </div>
+
+        <div class="news">
+          <article class="news-card">
+            <img src="https://images.pexels.com/photos/5905617/pexels-photo-5905617.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Élèves en activité">
+            <div class="news-body">
+              <span class="tag">Vie scolaire</span>
+              <h3>Un cadre propice aux apprentissages</h3>
+              <p>Découvrez les espaces et les activités qui rythment la vie de nos élèves.</p>
+              <button class="read-more" type="button">Lire la suite</button>
+              <div class="article-expanded"><p>Cette rubrique pourra être utilisée pour publier les annonces de l'établissement, les activités, les événements et les informations destinées aux familles.</p></div>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <img src="https://images.pexels.com/photos/8617964/pexels-photo-8617964.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Élève dans une salle">
+            <div class="news-body">
+              <span class="tag">Information</span>
+              <h3>Les informations de l'établissement</h3>
+              <p>Un espace pourra être consacré aux communications importantes de l'école.</p>
+              <button class="read-more" type="button">Lire la suite</button>
+              <div class="article-expanded"><p>Les responsables pourront y publier les dates, réunions, inscriptions, examens et autres informations utiles.</p></div>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <img src="https://images.pexels.com/photos/11025019/pexels-photo-11025019.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Apprentissage en groupe">
+            <div class="news-body">
+              <span class="tag">Communauté</span>
+              <h3>Une école, une communauté</h3>
+              <p>Parents, élèves, enseignants et administration participent à la vie de l'établissement.</p>
+              <button class="read-more" type="button">Lire la suite</button>
+              <div class="article-expanded"><p>Cette section est prête à accueillir les futures publications de votre établissement.</p></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark" id="parents">
+      <div class="container">
+        <div class="parent-box">
+          <span class="eyebrow">Espace parents</span>
+          <h2>Un espace pour rester informé.</h2>
+          <p style="margin-top:.8rem">
+            Cette partie pourra accueillir ultérieurement un véritable portail parents :
+            informations scolaires, communications, documents et services en ligne.
+          </p>
+          <div style="margin-top:1.3rem">
+            <button class="btn btn-primary" id="parents-login-button" type="button">Accéder à l'espace parents</button>
+            <div class="form-note" id="parents-note">L'espace parents n'est pas encore connecté à une base de données. Le bouton est prêt pour une future connexion.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="extensions">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Extensions</span>
+          <h2>Nos implantations</h2>
+          <p>Les différents sites associés au Complexe Scolaire Philadelphie.</p>
+        </div>
+        <div class="extensions" style="color:var(--ink)">
+          <div class="extension" style="background:#fff;border:1px solid var(--line)"><strong>Philadelphie principal</strong><p>Site principal</p></div>
+          <div class="extension" style="background:#fff;border:1px solid var(--line)"><strong>Irebu</strong><p>Extension scolaire</p></div>
+          <div class="extension" style="background:#fff;border:1px solid var(--line)"><strong>Dili</strong><p>Extension scolaire</p></div>
+          <div class="extension" style="background:#fff;border:1px solid var(--line)"><strong>Tumbumani</strong><p>Extension scolaire</p></div>
+          <div class="extension" style="background:#fff;border:1px solid var(--line)"><strong>Bananier</strong><p>Extension scolaire</p></div>
+          <div class="extension" style="background:#fff;border:1px solid var(--line)"><strong>Miningulu</strong><p>Extension scolaire</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Contact</span>
+          <h2>Parlons de votre établissement.</h2>
+          <p>Les coordonnées ci-dessous sont volontairement laissées à compléter avant publication définitive.</p>
+        </div>
+        <div class="contact">
+          <div class="contact-card"><strong>📍 Adresse</strong><p style="margin-top:.4rem">Kinshasa, commune de Kalamu, République démocratique du Congo</p></div>
+          <div class="contact-card"><strong>📞 Téléphone</strong><p style="margin-top:.4rem">Informations à compléter</p></div>
+          <div class="contact-card"><strong>✉️ E-mail</strong><p style="margin-top:.4rem">Informations à compléter</p></div>
+          <div class="contact-card"><strong>🕐 Horaires</strong><p style="margin-top:.4rem">Informations à compléter</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-title">Complexe Scolaire Philadelphie</div>
+          <p>Un parcours éducatif de la maternelle aux humanités.</p>
+        </div>
+        <div>
+          <div class="footer-title">Navigation</div>
+          <div class="footer-links">
+            <a href="#niveaux">Niveaux</a><a href="#ecole">Notre école</a><a href="#actualites">Actualités</a><a href="#contact">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-title">Localisation</div>
+          <p>Kinshasa · Commune de Kalamu · RDC</p>
+        </div>
+      </div>
+      <div class="copyright">© <span id="year"></span> Complexe Scolaire Philadelphie. Tous droits réservés.</div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const menuButton = document.getElementById('menu-btn');
+      const nav = document.getElementById('main-nav');
+
+      menuButton.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        menuButton.setAttribute('aria-expanded', String(open));
+      });
+
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          menuButton.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      document.querySelectorAll('.read-more').forEach(button => {
+        button.addEventListener('click', () => {
+          const article = button.nextElementSibling;
+          const expanded = article.classList.toggle('show');
+          button.textContent = expanded ? 'Réduire ↑' : 'Lire la suite';
+        });
+      });
+
+      const parentButton = document.getElementById('parents-login-button');
+      const parentNote = document.getElementById('parents-note');
+      parentButton.addEventListener('click', () => parentNote.classList.toggle('show'));
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
